@@ -1,0 +1,138 @@
+body {
+    background-color: #090b14;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body::before,
+body::after {
+    content: "";
+    display: block;
+    position: fixed;
+    width: 620px;
+    height: 620px;
+    filter: blur(100px);
+    opacity: 0.3;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+body::before {
+    background: #5b7fff;
+    top: -220px;
+    left: -180px;
+}
+
+body::after {
+    background: #9b6bff;
+    bottom: -220px;
+    right: -180px;
+}
+
+#Register .head {
+    width: 10%;
+    filter: drop-shadow(0 0 22px rgba(91, 127, 255, 0.45));
+}
+
+.formStudent,
+#FormSearch {
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    width: 70%;
+}
+
+#FormSearch {
+    width: 50%;
+}
+
+.input-group-text {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.input-group-text i {
+    color: #34E6D8;
+}
+
+.form-control,
+.input {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    color: #e8ecf7;
+    border-radius: 0 10px 10px 0;
+    transition: all .3s;
+}
+
+.form-control::placeholder {
+    color: #8b93ab;
+    opacity: 1;
+}
+
+.form-control:focus,
+.input:focus {
+    box-shadow: none;
+    background-color: rgba(91, 127, 255, 0.06);
+    color: #e8ecf7;
+    border-color: #5b7fff;
+    outline: none;
+}
+
+#Submit,
+#FormSearch button {
+    background: linear-gradient(135deg, #5b7fff, #9b6bff);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    width: 100%;
+}
+
+#Cancel {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    color: #8b93ab;
+    width: 100%;
+}
+
+#Cancel:hover {
+    color: #ff6b7a;
+    border-color: #ff6b7a;
+}
+
+#Table-student .table-responsive {
+    width: 90%;
+}
+
+#Table-student .table-responsive .table {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(16px);
+    width: 100%;
+}
+
+.api-error-banner {
+    background-color: rgba(255, 107, 122, 0.1);
+    border: 1px solid rgba(255, 107, 122, 0.35);
+    color: #ff6b7a;
+    margin-block: 20px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 11px;
+    animation: errorSlideIn 0.25s ease;
+}
+
+@keyframes errorSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

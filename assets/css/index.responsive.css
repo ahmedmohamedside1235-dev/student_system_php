@@ -1,0 +1,87 @@
+@media (max-width: 1300px) {
+
+    body::before,
+    body::after {
+        width: 220px;
+        height: 220px;
+    }
+
+    body::before {
+        background: #5b7fff;
+        top: -20px;
+        left: -10px;
+    }
+
+    body::after {
+        background: #9b6bff;
+        bottom: -20px;
+        right: -10px;
+    }
+
+    #Register .head {
+        width: 30%;
+    }
+
+    .formStudent {
+        width: 90%;
+    }
+
+    #FormSearch {
+        width: 80%;
+    }
+
+    #Submit,
+    #FormSearch button {
+        display: block;
+    }
+
+    #Table-student .table-responsive {
+        width: 90%;
+        margin: auto;
+    }
+
+    #Table-student .table-responsive .table {
+        width: max-content;
+    }
+
+    nav.navbar {
+        width: 80%;
+        margin: auto;
+    }
+
+}
+
+@media (min-width: 371px) and (max-width: 1300px) {}
+
+@media (min-width: 577px) and (max-width: 1300px) {}
+
+@media (min-width: 769px) and (max-width: 1300px) {
+    #Register .head {
+        width: 20%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+    #Register .head {
+        width: 15%;
+    }
+
+    .formStudent {
+        width: 80%;
+    }
+
+    #FormSearch {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1181px) and (max-width: 1300px) {
+    #Table-student .table-responsive {
+        width: 90%;
+        margin: auto;
+    }
+
+    #Table-student .table-responsive .table {
+        width: 100%;
+    }
+}
