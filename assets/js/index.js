@@ -2,12 +2,18 @@ $(document).ready(function () {
     getStudentsByPageNumber(1);
 });
 
-let searchValue = '',
+let searchValue = null,
     statusBtn = "show";
 $("#FormSearch").submit(function (e) {
     e.preventDefault();
     let inputSearch = new FormData(this);
-    searchValue = inputSearch.get('search');
+    let newValue = inputSearch.get('search') || '';
+
+    if (newValue === searchValue) {
+        return;
+    }
+
+    searchValue = newValue;
     getStudentsByPageNumber(1);
 });
 
@@ -153,7 +159,7 @@ function insertValuesInInputs(student) {
 
     disableBtns("edit");
     removeError();
-    
+
 }
 
 function disableBtns(status) {
