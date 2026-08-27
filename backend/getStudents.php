@@ -30,6 +30,7 @@ $stmt = $DB->query("SELECT
                             age LIKE '%{$search}%'
                             OR
                             phone LIKE '%{$search}%'
+                        ORDER BY id DESC
                         LIMIT 10 OFFSET {$offset}
                     ;");
 $students = $stmt->fetchAll();

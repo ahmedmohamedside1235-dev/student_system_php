@@ -4,7 +4,20 @@ require_once __DIR__ . "/../database/connection.php";
 
 function validate(): void
 {
+    $arrayValideInput = ['student_id', 'firstName', 'lastName', 'age', 'phone', 'email', 'password'];
+
+    foreach ($arrayValideInput as $field) {
+        if (!array_key_exists($field, $_POST)) {
+            addError("invalidInput", "Missing required field: $field");
+        }
+    }
+
     foreach ($_POST as $field => $value) {
+        if (!in_array($field, $arrayValideInput, true)) {
+            addError("invalidInput", "You are not allowed to submit unexpected fields");
+            redirectTo();
+        }
+
         if ($field !== "student_id") {
             validateRequired($field, $value);
         }
@@ -34,7 +47,19 @@ function validate(): void
 }
 function validateEdit(): void
 {
+    $arrayValideInput = ['student_id', 'firstName', 'lastName', 'age', 'phone', 'email', 'password'];
+
+    foreach ($arrayValideInput as $field) {
+        if (!array_key_exists($field, $_POST)) {
+            addError("invalidInput", "Missing required field: $field");
+        }
+    }
+
     foreach ($_POST as $field => $value) {
+        if (!in_array($field, $arrayValideInput, true)) {
+            addError("invalidInput", "You are not allowed to submit unexpected fields");
+            redirectTo();
+        }
 
         if ($field !== "password") {
             validateRequired($field, $value);

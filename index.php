@@ -23,6 +23,7 @@ session_start();
                 <img src="./assets/images/logo.png" class="img-fluid" alt="">
             </div>
             <form class="py-4 px-3 m-auto formStudent" action="<?= isset($_SESSION['status']) ? './backend/editStudentForm.php' : './backend/register.php' ?>" method="POST">
+                <p class="mb-3"><?= showError("invalidInput") ?></p>
                 <input type="hidden" class="inputId" name="student_id" value="<?= old('student_id') ?>">
                 <div class="row">
                     <div class="col-md-6">
@@ -119,8 +120,8 @@ session_start();
 
     <div id="Table-student" class="py-4">
         <div class="table-responsive m-auto">
-            <table class="table table-striped">
-                <thead class="table-dark">
+            <table class="table">
+                <thead>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
@@ -131,18 +132,20 @@ session_start();
                         <th scope="col">Options</th>
                     </tr>
                 </thead>
-                <tbody id="TableBody">
+                <tbody id="TableBody" class="text-light">
 
                 </tbody>
                 <p class="mt-3 empty w-100 d-block text-center alert alert-warning d-none">No Student Found</p>
             </table>
         </div>
     </div>
-    <nav aria-label="Page navigation example" class="d-flex justify-content-center align-items-center navbar">
-        <ul class="pagination" id="Pagination">
+    <div class="nav-links">
+        <nav aria-label="Page navigation example" class="Page navigation d-flex justify-content-center align-items-center navbar">
+            <ul class="pagination" id="Pagination">
 
-        </ul>
-    </nav>
+            </ul>
+        </nav>
+    </div>
 
     <script src="shared/js/bootstrap.js"></script>
     <script src="shared/js/jquery.js"></script>

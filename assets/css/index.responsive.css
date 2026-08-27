@@ -49,6 +49,23 @@
         margin: auto;
     }
 
+    .nav-links {
+        overflow-x: auto;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .nav-links::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+
+    .Page.navigation {
+        width: max-content;
+        padding-inline: 15px;
+    }
+
 }
 
 @media (min-width: 371px) and (max-width: 1300px) {}

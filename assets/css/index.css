@@ -104,13 +104,61 @@ body::after {
 
 #Table-student .table-responsive {
     width: 90%;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px -12px rgba(0, 0, 0, .35);
 }
 
-#Table-student .table-responsive .table {
-    background-color: rgba(255, 255, 255, 0.03) !important;
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    backdrop-filter: blur(16px);
-    width: 100%;
+.table {
+    margin-bottom: 0;
+    border-radius: 4px;
+}
+
+.table thead th {
+    background-color: #1B2430;
+    color: #fff;
+}
+
+.table tbody tr td,
+.table tbody tr th {
+    background-color: #222b4e;
+    border-color: rgba(27, 36, 48, .12);
+    vertical-align: middle;
+    color: #fff;
+}
+
+.table tbody tr:nth-child(even) td,
+.table tbody tr:nth-child(even) th {
+    background-color: #1B2547;
+}
+
+.pagination li button {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #1B2547;
+    padding: 10px 20px 9px;
+    height: fit-content;
+    color: #fff;
+    transition: all .3s;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.pagination li button.disabled {
+    opacity: 0.5;
+    background-color: #212c3a;
+    color: #fff;
+    cursor: none;
+}
+
+.pagination li button.active,
+.pagination li button:hover {
+    background: linear-gradient(135deg, #5b7fff, #9b6bff);
+    color: #fff;
+    border-color: #f3e8d2;
+}
+
+.pagination li button:focus {
+    box-shadow: none;
 }
 
 .api-error-banner {
